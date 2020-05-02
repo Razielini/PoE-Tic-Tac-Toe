@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Path of Exile Tic Tac Toe.
 
 ## Available Scripts
 
