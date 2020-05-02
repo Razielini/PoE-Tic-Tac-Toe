@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-// export default function Token(props) {
 export default class Token extends Component {
   constructor(props) {
     super(props)
@@ -9,12 +8,30 @@ export default class Token extends Component {
     }
   }
 
+  handleImage (xIsHover, currentPlayer, val) {
+    let res = null
+
+    if (xIsHover || val) {
+      res = <img
+              src={
+                xIsHover && !val ? currentPlayer : val
+              }
+              className={
+                xIsHover && !val ? 'hover-image' : null
+              }
+              alt="token"
+            />
+    }
+
+    return res
+  }
+
   render () {
-    const val = this.props.value
-    const currentPlayer = this.props.currentPlayer
-    const xIsHover = this.state.xIsHover
+    const val = this.props.value || null
+    const currentPlayer = this.props.currentPlayer || null
+    const xIsHover = this.state.xIsHover || null
     return <button
-        className="token"
+        className="token cursor-pointer"
         onClick={ this.props.onClick }
         onMouseEnter={ 
           () => this.setState({
@@ -27,16 +44,7 @@ export default class Token extends Component {
           })
         }
       >
-        { val ? <img
-                src={ this.props.value }
-                alt="token"
-              /> :
-                xIsHover ? <img
-                src={ currentPlayer }
-                alt="hover token"
-                className="hover-image"
-              /> : null
-        }
+        { this.handleImage (xIsHover, currentPlayer, val) }
       </button>
   }
 }
