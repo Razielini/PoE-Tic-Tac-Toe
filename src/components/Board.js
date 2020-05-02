@@ -6,12 +6,15 @@ export default class Board extends Component {
     return <Token
             value={ this.props.token[i] }
             onClick={ ()=> this.props.onClick(i) }
-            onMouseEnter={ () => this.props.onMouseEnter() }
-            onMouseLeave={ () => this.props.onMouseLeave() }
+            currentPlayer={ this.props.currentPlayer }
+            onMouseEnter={ () => this.props.isHover }
+            onMouseLeave={ () => !this.props.isHover }
           />
   }
 
   render () {
+    console.log('currentPlayer :: BOARD ::', this.props.currentPlayer)
+    console.log('isHover :: BOARD ::', this.props.isHover)
     return (
       <div>
         <div className="border-row">
