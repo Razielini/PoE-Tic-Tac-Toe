@@ -3,6 +3,10 @@
   height: 100px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .border-row {
   display: flex;
 }
