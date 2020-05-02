@@ -13,8 +13,6 @@ export default class Board extends Component {
   }
 
   render () {
-    console.log('currentPlayer :: BOARD ::', this.props.currentPlayer)
-    console.log('isHover :: BOARD ::', this.props.isHover)
     return (
       <div>
         <div className="border-row">
