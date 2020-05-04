@@ -27,11 +27,17 @@ export default class Token extends Component {
   }
 
   render () {
+    const winner = this.props.winner || null
+    const position = this.props.position
+    let imWinner = false
+    if (Array.isArray(winner)) {
+      imWinner = winner.includes(position)
+    }
     const val = this.props.value || null
     const currentPlayer = this.props.currentPlayer || null
     const xIsHover = this.state.xIsHover || null
     return <button
-        className="token cursor-pointer"
+        className={`token cursor-pointer ${ imWinner ? 'token-hover': null }`}
         onClick={ this.props.onClick }
         onMouseEnter={ 
           () => this.setState({
