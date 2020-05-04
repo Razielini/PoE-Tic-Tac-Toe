@@ -14,7 +14,7 @@ export default class Token extends Component {
     if (xIsHover || val) {
       res = <img
               src={
-                xIsHover && !val ? currentPlayer : val
+                xIsHover && !val ? currentPlayer.img : val
               }
               className={
                 xIsHover && !val ? 'hover-image' : null
@@ -33,7 +33,7 @@ export default class Token extends Component {
     if (Array.isArray(winner)) {
       imWinner = winner.includes(position)
     }
-    const val = this.props.value || null
+    const val = this.props.value?.img || null
     const currentPlayer = this.props.currentPlayer || null
     const xIsHover = this.state.xIsHover || null
     return <button
