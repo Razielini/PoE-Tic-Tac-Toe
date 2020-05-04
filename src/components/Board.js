@@ -5,6 +5,8 @@ export default class Board extends Component {
   renderToken (i) {
     return <Token
             value={ this.props.token[i] }
+            winner={ this.props.winner }
+            position={ i }
             onClick={ ()=> this.props.onClick(i) }
             currentPlayer={ this.props.currentPlayer }
             onMouseEnter={ () => this.props.isHover }
