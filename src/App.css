@@ -50,6 +50,29 @@ body {
   background: url('/ui/section-title-left.png') no-repeat 0 0,url('/ui/section-title-right.png') no-repeat 100% 0 #000;
 }
 
+.win-title {
+  width: 300px;
+  border: solid 1px #3d3f48;
+  text-align: center;
+  align-items: center;
+  padding: .5rem;
+  color: #b8905f;
+  font-size: 1.25rem;
+  background: url('/ui/section-title-left.png') no-repeat 0 0,url('/ui/section-title-right.png') no-repeat 100% 0 #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.win-title img {
+  padding: .5rem;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
 .game-section {
   display: flex;
   flex-direction: column;
