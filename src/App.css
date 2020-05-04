@@ -58,7 +58,7 @@ body {
   padding: .5rem;
   color: #b8905f;
   font-size: 1.25rem;
-  background: url('/ui/section-title-left.png') no-repeat 0 0,url('/ui/section-title-right.png') no-repeat 100% 0 #000;
+  background: url('/ui/section-title-left.png') repeat-y 0 0,url('/ui/section-title-right.png') repeat-y 100% 0 #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +68,30 @@ body {
 .win-title img {
   padding: .5rem;
 }
+
+.play-again {
+  text-align: center;
+  align-items: center;
+  color: #b8905f;
+  font-size: 1.75rem;
+  background: url('/ui/button-green-normal-middle.png') repeat-x;
+  margin: 1rem 3rem;
+}
+
+.play-again div {
+  width: 100%;
+  background: url('/ui/button-green-normal-left.png') no-repeat 0 0,url('/ui/button-green-normal-right.png') no-repeat 100% 0;
+  padding: 0.75rem 0;
+}
+
+.play-again:hover {
+  background: url('/ui/button-green-hover-middle.png') repeat-x;
+}
+
+.play-again div:hover {
+  background: url('/ui/button-green-hover-left.png') no-repeat 0 0,url('/ui/button-green-hover-right.png') no-repeat 100% 0;
+}
+
 
 .visibility-hidden {
   visibility: hidden;
