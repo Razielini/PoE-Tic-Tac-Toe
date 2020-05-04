@@ -30,7 +30,7 @@ export default class Game extends Component {
     }
   }
 
-  async handleClick (i) {
+  handleClick (i) {
     console.log(`handleClick[${i}] ::`)
     const history = this.state.history.slice(0, this.state.stepNumber + 1)
     const current = history[history.length - 1]
@@ -42,7 +42,7 @@ export default class Game extends Component {
     token[i] = xIsNext ? this.state.playerA : this.state.playerB
     let currentPlayer = !xIsNext ? this.state.playerA : this.state.playerB
 
-    const winner = await calculateWinner(token)
+    const winner = calculateWinner(token)
     console.log('GAME :: winner ::', winner)
     if (winner !== null) {
       currentPlayer = xIsNext ? this.state.playerA : this.state.playerB
@@ -56,6 +56,32 @@ export default class Game extends Component {
       xIsNext: !xIsNext,
       stepNumber: history.length,
       currentPlayer
+    })
+  }
+
+  playAgain () {
+    console.log('Play AGAIN');
+    this.setState({
+      playerA: {
+        img: '/img/CurrencyVaal.png',
+        name: 'Corruption'
+      },
+      playerB: {
+        img: '/img/CurrencyRerollRare.png',
+        name: 'Chaos'
+      },
+      xIsNext: true,
+      xIsHover: false,
+      currentPlayer: {
+        img: '/img/CurrencyVaal.png',
+        name: 'Corruption'
+      },
+      stepNumber: 0,
+      history: [
+        {
+          token: Array(9).fill(null)
+        }
+      ]
     })
   }
 
@@ -83,6 +109,7 @@ export default class Game extends Component {
         <Wintitle
           winner={ winner }
           currentPlayer={ currentPlayer }
+          onClick={ () => this.playAgain() }
         />
       </div>
     )
