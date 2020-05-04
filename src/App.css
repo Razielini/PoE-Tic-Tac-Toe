@@ -1,6 +1,33 @@
+@font-face {
+  font-family: Fontin SmallCaps;
+  font-weight: 400;
+  src: url(/font/Fontin-SmallCaps.ttf) format("ttf");
+}
+
+body {
+  background-color: #121212;
+  font-family: Fontin SmallCaps!important
+}
+
+.token:before {
+  background-image: url('/ui/subtle-grunge.png');
+}
+
+.token:focus {
+  outline-color: #131111;
+}
+
 .token {
   width: 100px;
   height: 100px;
+  border-top-width: 2px;
+  border-color: #131111;
+  background-color: #211b14;
+}
+
+.token:hover,
+.token-hover {
+  background-color: #392810;
 }
 
 .cursor-pointer {
@@ -9,6 +36,18 @@
 
 .border-row {
   display: flex;
+}
+
+.title {
+  width: 300px;
+  border: solid 1px #3d3f48;
+  text-align: center;
+  align-items: center;
+  height: 2rem;
+  padding: .5rem;
+  color: #b8905f;
+  font-size: 1.25rem;
+  background: url('/ui/section-title-left.png') no-repeat 0 0,url('/ui/section-title-right.png') no-repeat 100% 0 #000;
 }
 
 .game-section {
