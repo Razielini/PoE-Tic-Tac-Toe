@@ -36,6 +36,11 @@ export default class Game extends Component {
     const current = history[history.length - 1]
     const token = current.token.slice()
 
+    console.log('GAME :: token i ::', token[i])
+    if (token[i] !== null) {
+      return false
+    }
+
     console.log('GAME :: handleClick 1 ::', this.state.currentPlayer)
 
     const xIsNext = this.state.xIsNext
@@ -128,13 +133,13 @@ function calculateWinner(token) {
     [2, 4, 6]
   ]
 
-  console.log('token :: ', token)
+  // console.log('token :: ', token)
 
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i]
-    console.log('lines:: ', lines[i])
+    // console.log('lines:: ', lines[i])
     if (token[a] && token[a] === token[b] && token[b] === token[c]) {
-      console.log('WINNER WINNER WINNER :: ', lines[i])
+      // console.log('WINNER WINNER WINNER :: ', lines[i])
       return lines[i]
     }
   }
