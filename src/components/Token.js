@@ -10,7 +10,6 @@ export default class Token extends Component {
 
   handleImage (xIsHover, currentPlayer, val) {
     let res = null
-
     if (xIsHover || val) {
       res = <img
               src={
