@@ -80,7 +80,7 @@ body {
 
 .play-again div {
   width: 100%;
-  background: url('/ui/button-green-normal-left.png') no-repeat 0 0,url('/ui/button-green-normal-right.png') no-repeat 100% 0;
+  background: url('/ui/button-green-normal-left.png') no-repeat 0 0, url('/ui/button-green-normal-right.png') no-repeat 100% 0;
   padding: 0.75rem 0;
 }
 
@@ -89,12 +89,46 @@ body {
 }
 
 .play-again div:hover {
-  background: url('/ui/button-green-hover-left.png') no-repeat 0 0,url('/ui/button-green-hover-right.png') no-repeat 100% 0;
+  background: url('/ui/button-green-hover-left.png') no-repeat 0 0, url('/ui/button-green-hover-right.png') no-repeat 100% 0;
 }
 
 
 .visibility-hidden {
   visibility: hidden;
+}
+
+footer {
+  position: absolute;
+  background: url('/ui/section-title-left.png') repeat-y 0 0, url('/ui/section-title-right.png') repeat-y 100% 0 #000;
+  border-color: #3d3f48;
+  border-width: 1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  flex-direction: row;
+  font-size: .75rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: .25rem 1rem;
+}
+
+footer .container a {
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+footer .logo-react {
+  width: 32px;
+  height: 32px;
 }
 
 .game-section {
