@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Board from './Board.js'
 import Title from './Title.js'
 import Wintitle from './Wintitle.js'
+import Footer from './Footer.js'
 
 export default class Game extends Component {
   constructor(props) {
@@ -115,6 +116,7 @@ export default class Game extends Component {
           currentPlayer={ currentPlayer }
           onClick={ () => this.playAgain() }
         />
+        <Footer />
       </div>
     )
   }
