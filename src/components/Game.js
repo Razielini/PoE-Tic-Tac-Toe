@@ -93,9 +93,7 @@ export default class Game extends Component {
   render () {
     const history = this.state.history
     const current = history[this.state.stepNumber]
-    console.log('GAME :: currentPlayer ::', this.state.currentPlayer)
     const currentPlayer = this.state.currentPlayer
-    console.log('GAME :: currentPlayer ::', this.state.currentPlayer)
 
     const winner = calculateWinner(current.token)
     return (
@@ -113,6 +111,7 @@ export default class Game extends Component {
         />
         <Wintitle
           winner={ winner }
+          token={ current.token }
           currentPlayer={ currentPlayer }
           onClick={ () => this.playAgain() }
         />
