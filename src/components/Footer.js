@@ -3,30 +3,22 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer
-      className="footer-bench md:tw-absolute"
+      className="footer-bench"
     >
       <div
-        className="container tw-py-4 tw-text-xs tw-flex tw-justify-center tw-items-center tw-flex-col md:tw-flex-row tw-justify-around tw-text-center"
+        className="container"
       >
         <div>
-          <div
-            className="tw-flex tw-justify-center tw-my-2"
-          >
+          <div>
             Hecho por el exiliado Razielini.
           </div>
 
-          <div
-            className="tw-flex tw-justify-center"
-          >
+          <div>
             Este sitio está hecho por un fan y no está afiliado a Grinding Gear Games de ninguna manera.
           </div>
         </div>
-        <div
-          className="md:tw-self-end tw-self-center tw-my-2"
-        >
-          <div
-            className="tw-flex"
-          >
+        <div>
+          <div>
             <a
               href="https://facebook.com/"
               target="_blank"
@@ -77,7 +69,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://github.com/Razielini/poe-divination-card-generator"
+              href="https://github.com/Razielini/PoE-Tic-Tac-Toe"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -102,7 +94,7 @@ export default function Footer() {
               <img
                 class="logo-react"
                 src="/logo192.png"
-              ></img>
+              />
             </a>
           </div>
         </div>
