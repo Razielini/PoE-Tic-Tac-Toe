@@ -1,10 +1,8 @@
 import React from 'react'
 
 export default function Wintitle(props) {
-  console.log('wintitle :: ', props.token)
   const winner = props.winner
   const draw = props.token.filter(Boolean).length;
-  console.log('draw :: ', draw)
 
   let klass = 'visibility-hidden'
 
