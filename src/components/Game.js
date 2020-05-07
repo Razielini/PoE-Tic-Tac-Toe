@@ -32,12 +32,10 @@ export default class Game extends Component {
   }
 
   handleClick (i, w) {
-    console.log(`handleClick[${i}] ::`)
     const history = this.state.history.slice(0, this.state.stepNumber + 1)
     const current = history[history.length - 1]
     const token = current.token.slice()
 
-    console.log('GAME :: token i ::', token[i])
     if (token[i] !== null || w) {
       return false
     }
@@ -47,12 +45,10 @@ export default class Game extends Component {
     let currentPlayer = !xIsNext ? this.state.playerA : this.state.playerB
 
     const winner = calculateWinner(token)
-    console.log('GAME :: winner ::', winner)
     if (winner !== null) {
       currentPlayer = xIsNext ? this.state.playerA : this.state.playerB
     }
 
-    console.log('GAME :: handleClick 2 ::', this.state.currentPlayer)
     this.setState({
       history: history.concat({
         token
@@ -132,13 +128,9 @@ function calculateWinner(token) {
     [2, 4, 6]
   ]
 
-  // console.log('token :: ', token)
-
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i]
-    // console.log('lines:: ', lines[i])
     if (token[a] && token[a] === token[b] && token[b] === token[c]) {
-      // console.log('WINNER WINNER WINNER :: ', lines[i])
       return lines[i]
     }
   }
