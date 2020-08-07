@@ -2,7 +2,7 @@
 
 A tic tac toe game made in React with a Path of Exile theme.
 Demo:
-http://poe-tic-tac-toe.razielini.dev/
+https://poe-tic-tac-toe.razielini.dev/
 
 ## Available Scripts
 
